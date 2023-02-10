@@ -1,0 +1,42 @@
+import java.lang.*;
+import java.util.*;
+
+public class Main {
+    public static void main(String[] args) {
+        // YOUR CODE GOES HERE
+        // Please take input and print output to standard input/output (stdin/stdout)
+        // DO NOT USE ARGUMENTS FOR INPUTS
+        // E.g. 'Scanner' for input & 'System.out' for output
+        Scanner sc = new Scanner(System.in);
+        int T = sc.nextInt();
+        while(T>0){
+            int N = sc.nextInt();
+            int A [] = new int[N];
+            for(int i = 0 ; i<A.length ; i++){
+            A[i] = sc.nextInt();
+            }
+            int countEven = 0;
+            int countOdd = 0;
+            int diffrence = 0;
+            for(int j = 0 ; j<A.length ; j++){
+                if(A[j]%2==0){
+                    countEven++;
+                }
+                else{
+                    countOdd++;
+                }
+                
+
+            }
+            if(countEven>countOdd){
+                 diffrence = countEven - countOdd;
+                }
+                else{
+                    diffrence = countOdd-countEven;
+                }
+                System.out.println(diffrence);
+            T--;
+        }
+        
+    }
+}
