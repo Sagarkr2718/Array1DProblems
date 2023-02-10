@@ -1,0 +1,21 @@
+public static int even_odd(int[] ls) {
+    // Write your code here
+    int sumEven = 0;
+    int sumOdd = 0 ;
+    
+    for(int i = 0 ; i< ls.length ; i++){
+        if(ls[i]%2==0){
+            sumEven+=ls[i];
+        }
+        else{
+            sumOdd+=ls[i];
+        }
+    }
+    int diffrence = sumEven-sumOdd;
+    if(diffrence<-1){
+        return diffrence*-1;
+    }
+    return diffrence;
+
+}
+
